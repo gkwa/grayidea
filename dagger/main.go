@@ -9,7 +9,6 @@ import (
 type Grayidea struct{}
 
 func (m *Grayidea) HelloWorld(ctx context.Context) (string, error) {
-	// return dag.Hello().Hello(ctx)
 	return dag.Anyprotocol().HelloModule().Stdout(ctx)
 }
 
