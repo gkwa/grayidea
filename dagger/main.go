@@ -6,12 +6,11 @@ import (
 	"dagger/grayidea/internal/dagger"
 )
 
-type Grayidea struct {
-	HelloClient *dagger.Hello
-}
+type Grayidea struct{}
 
 func (m *Grayidea) HelloWorld(ctx context.Context) (string, error) {
-	return m.HelloClient.Hello(ctx, "", "", false, false, nil)
+	// return dag.Hello().Hello(ctx)
+	return dag.Anyprotocol().HelloModule().Stdout(ctx)
 }
 
 func (m *Grayidea) ContainerEcho(stringArg string) *dagger.Container {

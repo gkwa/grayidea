@@ -4,6 +4,11 @@
   "sdk": "go",
   "dependencies": [
     {
+      "name": "anyprotocol",
+      "source": "github.com/gkwa/anyprotocol",
+      "pin": "6ca5a28b267327faa003add0fa8f67dfc7cf6f30"
+    },
+    {
       "name": "hello",
       "source": "github.com/shykes/daggerverse/hello@hello/v0.3.0",
       "pin": "54d86c6002d954167796e41886a47c47d95a626d"
