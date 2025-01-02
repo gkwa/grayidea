@@ -7,11 +7,11 @@ import (
 )
 
 type Grayidea struct {
-	AnyprotocolClient *dagger.Client
+	HelloClient *dagger.Hello
 }
 
-func (m *Grayidea) Hello(ctx context.Context) (string, error) {
-	return m.AnyprotocolClient.AnyprotocolHelloModule().Stdout(ctx)
+func (m *Grayidea) HelloWorld(ctx context.Context) (string, error) {
+	return m.HelloClient.Hello(ctx, "", "", false, false, nil)
 }
 
 func (m *Grayidea) ContainerEcho(stringArg string) *dagger.Container {
