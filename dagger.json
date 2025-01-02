@@ -1,0 +1,13 @@
+{
+  "name": "grayidea",
+  "engineVersion": "v0.15.1",
+  "sdk": "go",
+  "dependencies": [
+    {
+      "name": "anyprotocol",
+      "source": "github.com/gkwa/anyprotocol",
+      "pin": "6ca5a28b267327faa003add0fa8f67dfc7cf6f30"
+    }
+  ],
+  "source": "dagger"
+}
