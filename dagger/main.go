@@ -6,10 +6,12 @@ import (
 	"dagger/grayidea/internal/dagger"
 )
 
-type Grayidea struct{}
+type Grayidea struct {
+	AnyprotocolClient *dagger.Client
+}
 
 func (m *Grayidea) Hello(ctx context.Context) (string, error) {
-	return dag.Container().From("alpine:latest").WithExec([]string{"echo", "hello from anyprotocol"}).Stdout(ctx)
+	return m.AnyprotocolClient.AnyprotocolHelloModule().Stdout(ctx)
 }
 
 func (m *Grayidea) ContainerEcho(stringArg string) *dagger.Container {
